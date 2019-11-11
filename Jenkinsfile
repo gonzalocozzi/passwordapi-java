@@ -39,7 +39,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh "kubectl set image deployment/gcozzi passnico=gonzalocozzi/passwordapi-java:taller\${BUILD_ID}"
+                sh "kubectl set image deployment/gcozzi gcozzi=gonzalocozzi/passwordapi-java:taller\${BUILD_ID}"
                 sh "sleep 60"
             }
         }
